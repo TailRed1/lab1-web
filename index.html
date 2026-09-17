@@ -1,12 +1,179 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторна робота №1</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Головна сторінка навчального лендінгу: новини, послуги, переваги.">
+
+    <title>Лабораторна 2 - Головна</title>
 </head>
+
 <body>
-    <p>Студент: Дмитро Тимков</p>
-    <p>Група: 6.1214-pi-2</p>
+
+    <!-- Посилання для швидкого переходу до основного контенту -->
+    <a class="skip-link" href="#main">
+        Перейти до основного контенту
+    </a>
+
+    <!-- Шапка сайту -->
+    <header class="site-header">
+
+        <h1>Мій перший лендінг</h1>
+
+        <nav class="site-nav" aria-label="Головна навігація">
+            <ul>
+                <li>
+                    <a href="index.html" aria-current="page">
+                        Головна
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        Про нас
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contacts.html">
+                        Контакти
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Основний контент -->
+    <main id="main">
+
+        <!-- Новина -->
+        <article class="article">
+
+            <header>
+                <h2>Новини</h2>
+            </header>
+
+            <p>
+                Вітаю! Це моя друга лабораторна робота
+                з веб-програмування.
+            </p>
+
+            <figure>
+
+                <img
+                    src="assets/images/photo.png"
+                    alt="Зображення для лабораторної роботи"
+                    width="400"
+                >
+
+                <figcaption>
+                    Зображення для новини
+                </figcaption>
+
+            </figure>
+
+        </article>
+
+        <!-- Список переваг -->
+        <section
+            class="benefits"
+            aria-labelledby="benefits-title"
+        >
+
+            <h3 id="benefits-title">
+                Наші переваги
+            </h3>
+
+            <ul>
+                <li>Сучасні технології</li>
+                <li>Зручна навігація</li>
+                <li>Адаптивна структура</li>
+            </ul>
+
+        </section>
+
+        <!-- Таблиця -->
+        <section
+            class="services"
+            aria-labelledby="services-title"
+        >
+
+            <h3 id="services-title">
+                Наші послуги
+            </h3>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Послуга</th>
+                        <th scope="col">Опис</th>
+                        <th scope="col">Ціна</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Розробка сайту</td>
+                        <td>Створення простого корпоративного сайту</td>
+                        <td>від 500 $</td>
+                    </tr>
+
+                    <tr>
+                        <td>SEO-оптимізація</td>
+                        <td>Базова оптимізація та покращення видимості</td>
+                        <td>від 300 $</td>
+                    </tr>
+
+                    <tr>
+                        <td>Підтримка</td>
+                        <td>Оновлення та технічна допомога</td>
+                        <td>від 100 $ / місяць</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <!-- Побічна інформація -->
+    <aside class="sidebar">
+
+        <h3>Корисні посилання</h3>
+
+        <ul>
+            <li>
+                <a
+                    href="https://developer.mozilla.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    MDN Web Docs
+                </a>
+            </li>
+        </ul>
+
+    </aside>
+
+    <!-- Підвал -->
+    <footer class="site-footer">
+
+        <p>
+            © 2026 Група 6.1214-пі-2
+        </p>
+
+    </footer>
+
 </body>
+
 </html>

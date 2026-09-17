@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Контактна сторінка навчального лендінгу.">
+
+    <title>Лабораторна 2 - Контакти</title>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main">
+        Перейти до основного контенту
+    </a>
+
+    <header class="site-header">
+
+        <h1>Мій перший лендінг</h1>
+
+        <nav class="site-nav" aria-label="Головна навігація">
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Головна
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        Про нас
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contacts.html" aria-current="page">
+                        Контакти
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <main id="main">
+
+        <section
+            class="contact-form"
+            aria-labelledby="contact-form-title"
+        >
+
+            <h2 id="contact-form-title">
+                Зв'яжіться з нами
+            </h2>
+
+            <h3>Форма зворотного зв'язку</h3>
+
+            <form action="#">
+
+                <!-- Ім'я -->
+                <div class="form-row">
+
+                    <label for="name">
+                        Ім'я:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Ваше ім'я"
+                        required
+                        minlength="2"
+                        maxlength="50"
+                        pattern="[A-Za-zА-Яа-яІіЇїЄєҐґ' -]+"
+                        title="Ім'я може містити лише літери, пробіл, апостроф або дефіс"
+                    >
+
+                </div>
+
+                <!-- Email -->
+                <div class="form-row">
+
+                    <label for="email">
+                        Email:
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@gmail.com"
+                        required
+                    >
+
+                </div>
+
+                <!-- Телефон -->
+                <div class="form-row">
+
+                    <label for="phone">
+                        Телефон:
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+380XXXXXXXXX"
+                        required
+                        pattern="\+380[0-9]{9}"
+                        title="Введіть номер у форматі +380XXXXXXXXX"
+                    >
+
+                </div>
+
+                <!-- Повідомлення -->
+                <div class="form-row">
+
+                    <label for="message">
+                        Повідомлення:
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Ваше повідомлення"
+                        rows="5"
+                        required
+                        minlength="10"
+                        maxlength="500"
+                    ></textarea>
+
+                </div>
+
+                <button type="submit">
+                    Надіслати
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <section
+            class="contacts"
+            aria-labelledby="contacts-title"
+        >
+
+            <h2 id="contacts-title">
+                Наші контакти
+            </h2>
+
+            <address>
+
+                <p>
+                    Email:
+                    <a href="mailto:example@gmail.com">
+                        example@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    Телефон:
+                    <a href="tel:+380991234567">
+                        +38 (099) 123-45-67
+                    </a>
+                </p>
+
+                <p>
+                    Адреса: м. Запоріжжя, Україна
+                </p>
+
+            </address>
+
+        </section>
+
+    </main>
+
+
+    <aside class="social">
+
+        <h3>Соціальні мережі</h3>
+
+        <ul>
+
+            <li>
+                <a href="#"
+                   rel="noopener noreferrer">
+                    Facebook
+                </a>
+            </li>
+
+            <li>
+                <a href="#"
+                   rel="noopener noreferrer">
+                    Instagram
+                </a>
+            </li>
+
+            <li>
+                <a href="#"
+                   rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+
+    <footer class="site-footer">
+
+        <p>
+            © 2026 Група 6.1214-пі-2
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
