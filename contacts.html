@@ -10,7 +10,9 @@
     <meta name="description"
           content="Контактна сторінка навчального лендінгу.">
 
-    <title>Лабораторна 2 - Контакти</title>
+    <title>Лабораторна 3 - Контакти</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -19,195 +21,175 @@
         Перейти до основного контенту
     </a>
 
-    <header class="site-header">
+    <header class="header">
 
-        <h1>Мій перший лендінг</h1>
+        <h1 class="header__title">
+            Мій перший лендінг
+        </h1>
 
-        <nav class="site-nav" aria-label="Головна навігація">
-            <ul>
+        <nav class="navigation"
+             aria-label="Головна навігація">
 
-                <li>
-                    <a href="index.html">
+            <ul class="navigation__list">
+
+                <li class="navigation__item">
+                    <a class="navigation__link"
+                       href="index.html">
                         Головна
                     </a>
                 </li>
 
-                <li>
-                    <a href="about.html">
+                <li class="navigation__item">
+                    <a class="navigation__link"
+                       href="about.html">
                         Про нас
                     </a>
                 </li>
 
-                <li>
-                    <a href="contacts.html" aria-current="page">
+                <li class="navigation__item">
+                    <a class="navigation__link"
+                       href="contacts.html"
+                       aria-current="page">
                         Контакти
                     </a>
                 </li>
 
             </ul>
+
         </nav>
 
     </header>
 
-    <main id="main">
 
-        <section
-            class="contact-form"
-            aria-labelledby="contact-form-title"
-        >
+    <main class="main" id="main">
 
-            <h2 id="contact-form-title">
-                Зв'яжіться з нами
-            </h2>
+        <h2 class="main__title">
+            Зв'яжіться з нами
+        </h2>
 
-            <h3>Форма зворотного зв'язку</h3>
+        <form class="contact-form" action="#">
 
-            <form action="#">
+            <div class="contact-form__item">
 
-                <!-- Ім'я -->
-                <div class="form-row">
+                <label class="contact-form__label"
+                       for="name">
+                    Ім'я:
+                </label>
 
-                    <label for="name">
-                        Ім'я:
-                    </label>
+                <input
+                    class="contact-form__input"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Ваше ім'я"
+                    required
+                    minlength="2"
+                    maxlength="50"
+                    pattern="[A-Za-zА-Яа-яІіЇїЄєҐґ' -]+"
+                    title="Ім'я може містити лише літери, пробіл, апостроф або дефіс"
+                >
 
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Ваше ім'я"
-                        required
-                        minlength="2"
-                        maxlength="50"
-                        pattern="[A-Za-zА-Яа-яІіЇїЄєҐґ' -]+"
-                        title="Ім'я може містити лише літери, пробіл, апостроф або дефіс"
-                    >
-
-                </div>
-
-                <!-- Email -->
-                <div class="form-row">
-
-                    <label for="email">
-                        Email:
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="example@gmail.com"
-                        required
-                    >
-
-                </div>
-
-                <!-- Телефон -->
-                <div class="form-row">
-
-                    <label for="phone">
-                        Телефон:
-                    </label>
-
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="+380XXXXXXXXX"
-                        required
-                        pattern="\+380[0-9]{9}"
-                        title="Введіть номер у форматі +380XXXXXXXXX"
-                    >
-
-                </div>
-
-                <!-- Повідомлення -->
-                <div class="form-row">
-
-                    <label for="message">
-                        Повідомлення:
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        placeholder="Ваше повідомлення"
-                        rows="5"
-                        required
-                        minlength="10"
-                        maxlength="500"
-                    ></textarea>
-
-                </div>
-
-                <button type="submit">
-                    Надіслати
-                </button>
-
-            </form>
-
-        </section>
+            </div>
 
 
-        <section
-            class="contacts"
-            aria-labelledby="contacts-title"
-        >
+            <div class="contact-form__item">
 
-            <h2 id="contacts-title">
-                Наші контакти
-            </h2>
-
-            <address>
-
-                <p>
+                <label class="contact-form__label"
+                       for="email">
                     Email:
-                    <a href="mailto:example@gmail.com">
-                        example@gmail.com
-                    </a>
-                </p>
+                </label>
 
-                <p>
+                <input
+                    class="contact-form__input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@gmail.com"
+                    required
+                >
+
+            </div>
+
+
+            <div class="contact-form__item">
+
+                <label class="contact-form__label"
+                       for="phone">
                     Телефон:
-                    <a href="tel:+380991234567">
-                        +38 (099) 123-45-67
-                    </a>
-                </p>
+                </label>
 
-                <p>
-                    Адреса: м. Запоріжжя, Україна
-                </p>
+                <input
+                    class="contact-form__input"
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+380XXXXXXXXX"
+                    required
+                    pattern="\+380[0-9]{9}"
+                    title="Введіть номер у форматі +380XXXXXXXXX"
+                >
 
-            </address>
+            </div>
 
-        </section>
+
+            <div class="contact-form__item">
+
+                <label class="contact-form__label"
+                       for="message">
+                    Повідомлення:
+                </label>
+
+                <textarea
+                    class="contact-form__textarea"
+                    id="message"
+                    name="message"
+                    placeholder="Ваше повідомлення"
+                    rows="5"
+                    required
+                    minlength="10"
+                    maxlength="500"
+                ></textarea>
+
+            </div>
+
+
+            <button
+                class="contact-form__button"
+                type="submit"
+            >
+                Надіслати
+            </button>
+
+        </form>
 
     </main>
 
 
-    <aside class="social">
+    <aside class="sidebar sidebar--social">
 
-        <h3>Соціальні мережі</h3>
+        <h3 class="sidebar__title">
+            Соціальні мережі
+        </h3>
 
-        <ul>
+        <ul class="sidebar__list">
 
-            <li>
-                <a href="#"
-                   rel="noopener noreferrer">
+            <li class="sidebar__item">
+                <a class="sidebar__link"
+                   href="#">
                     Facebook
                 </a>
             </li>
 
-            <li>
-                <a href="#"
-                   rel="noopener noreferrer">
+            <li class="sidebar__item">
+                <a class="sidebar__link"
+                   href="#">
                     Instagram
                 </a>
             </li>
 
-            <li>
-                <a href="#"
-                   rel="noopener noreferrer">
+            <li class="sidebar__item">
+                <a class="sidebar__link"
+                   href="#">
                     LinkedIn
                 </a>
             </li>
@@ -217,9 +199,9 @@
     </aside>
 
 
-    <footer class="site-footer">
+    <footer class="footer">
 
-        <p>
+        <p class="footer__text">
             © 2026 Група 6.1214-пі-2
         </p>
 

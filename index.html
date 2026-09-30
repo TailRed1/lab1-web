@@ -10,69 +10,85 @@
     <meta name="description"
           content="Головна сторінка навчального лендінгу: новини, послуги, переваги.">
 
-    <title>Лабораторна 2 - Головна</title>
+    <title>Лабораторна 3 - Головна</title>
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- Посилання для швидкого переходу до основного контенту -->
     <a class="skip-link" href="#main">
         Перейти до основного контенту
     </a>
 
-    <!-- Шапка сайту -->
-    <header class="site-header">
+    <header class="header">
 
-        <h1>Мій перший лендінг</h1>
+        <h1 class="header__title">
+            Мій перший лендінг
+        </h1>
 
-        <nav class="site-nav" aria-label="Головна навігація">
-            <ul>
-                <li>
-                    <a href="index.html" aria-current="page">
+        <nav class="navigation" aria-label="Головна навігація">
+
+            <ul class="navigation__list">
+
+                <li class="navigation__item">
+                    <a
+                        class="navigation__link"
+                        href="index.html"
+                        aria-current="page"
+                    >
                         Головна
                     </a>
                 </li>
 
-                <li>
-                    <a href="about.html">
+                <li class="navigation__item">
+                    <a
+                        class="navigation__link"
+                        href="about.html"
+                    >
                         Про нас
                     </a>
                 </li>
 
-                <li>
-                    <a href="contacts.html">
+                <li class="navigation__item">
+                    <a
+                        class="navigation__link"
+                        href="contacts.html"
+                    >
                         Контакти
                     </a>
                 </li>
+
             </ul>
+
         </nav>
 
     </header>
 
-    <!-- Основний контент -->
-    <main id="main">
 
-        <!-- Новина -->
+    <main class="main" id="main">
+
         <article class="article">
 
-            <header>
-                <h2>Новини</h2>
-            </header>
+            <h2 class="article__title">
+                Новини
+            </h2>
 
-            <p>
-                Вітаю! Це моя друга лабораторна робота
+            <p class="article__text">
+                Вітаю! Це моя третя лабораторна робота
                 з веб-програмування.
             </p>
 
-            <figure>
+            <figure class="media article__media media--framed">
 
                 <img
+                    class="media__image"
                     src="assets/images/photo.png"
                     alt="Зображення для лабораторної роботи"
                     width="400"
                 >
 
-                <figcaption>
+                <figcaption class="media__caption">
                     Зображення для новини
                 </figcaption>
 
@@ -80,62 +96,128 @@
 
         </article>
 
-        <!-- Список переваг -->
-        <section
-            class="benefits"
-            aria-labelledby="benefits-title"
-        >
 
-            <h3 id="benefits-title">
+        <section class="benefits"
+                 aria-labelledby="benefits-title">
+
+            <h3
+                class="benefits__title"
+                id="benefits-title"
+            >
                 Наші переваги
             </h3>
 
-            <ul>
-                <li>Сучасні технології</li>
-                <li>Зручна навігація</li>
-                <li>Адаптивна структура</li>
+            <ul class="benefits__list">
+
+                <li class="benefits__item">
+                    Сучасні технології
+                </li>
+
+                <li class="benefits__item">
+                    Зручна навігація
+                </li>
+
+                <li class="benefits__item">
+                    Адаптивна структура
+                </li>
+
             </ul>
 
         </section>
 
-        <!-- Таблиця -->
-        <section
-            class="services"
-            aria-labelledby="services-title"
-        >
 
-            <h3 id="services-title">
+        <section class="services"
+                 aria-labelledby="services-title">
+
+            <h3
+                class="services__title"
+                id="services-title"
+            >
                 Наші послуги
             </h3>
 
-            <table>
+            <table class="services__table">
 
                 <thead>
-                    <tr>
-                        <th scope="col">Послуга</th>
-                        <th scope="col">Опис</th>
-                        <th scope="col">Ціна</th>
+
+                    <tr class="services__row">
+
+                        <th
+                            class="services__header"
+                            scope="col"
+                        >
+                            Послуга
+                        </th>
+
+                        <th
+                            class="services__header"
+                            scope="col"
+                        >
+                            Опис
+                        </th>
+
+                        <th
+                            class="services__header"
+                            scope="col"
+                        >
+                            Ціна
+                        </th>
+
                     </tr>
+
                 </thead>
+
 
                 <tbody>
 
-                    <tr>
-                        <td>Розробка сайту</td>
-                        <td>Створення простого корпоративного сайту</td>
-                        <td>від 500 $</td>
+                    <tr class="services__row">
+
+                        <td class="services__cell">
+                            Розробка сайту
+                        </td>
+
+                        <td class="services__cell">
+                            Створення простого корпоративного сайту
+                        </td>
+
+                        <td class="services__cell">
+                            від 500 $
+                        </td>
+
                     </tr>
 
-                    <tr>
-                        <td>SEO-оптимізація</td>
-                        <td>Базова оптимізація та покращення видимості</td>
-                        <td>від 300 $</td>
+
+                    <tr class="services__row">
+
+                        <td class="services__cell">
+                            SEO-оптимізація
+                        </td>
+
+                        <td class="services__cell">
+                            Базова оптимізація та покращення видимості
+                        </td>
+
+                        <td class="services__cell">
+                            від 300 $
+                        </td>
+
                     </tr>
 
-                    <tr>
-                        <td>Підтримка</td>
-                        <td>Оновлення та технічна допомога</td>
-                        <td>від 100 $ / місяць</td>
+
+                    <tr class="services__row">
+
+                        <td class="services__cell">
+                            Підтримка
+                        </td>
+
+                        <td class="services__cell">
+                            Оновлення та технічна допомога
+                        </td>
+
+                        <td class="services__cell">
+                            від 100 $ / місяць
+                        </td>
+
                     </tr>
 
                 </tbody>
@@ -146,29 +228,36 @@
 
     </main>
 
-    <!-- Побічна інформація -->
-    <aside class="sidebar">
 
-        <h3>Корисні посилання</h3>
+    <aside class="sidebar sidebar--links">
 
-        <ul>
-            <li>
+        <h3 class="sidebar__title">
+            Корисні посилання
+        </h3>
+
+        <ul class="sidebar__list">
+
+            <li class="sidebar__item">
+
                 <a
+                    class="sidebar__link"
                     href="https://developer.mozilla.org/"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     MDN Web Docs
                 </a>
+
             </li>
+
         </ul>
 
     </aside>
 
-    <!-- Підвал -->
-    <footer class="site-footer">
 
-        <p>
+    <footer class="footer">
+
+        <p class="footer__text">
             © 2026 Група 6.1214-пі-2
         </p>
 
