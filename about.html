@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
-
     <meta name="description"
           content="Інформація про нашу команду.">
 
-    <title>Лабораторна 2 - Про нас</title>
+    <title>Лабораторна 3 - Про нас</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -19,107 +19,116 @@
         Перейти до основного контенту
     </a>
 
-    <header class="site-header">
+    <header class="header">
 
-        <h1>Мій перший лендінг</h1>
+        <h1 class="header__title">
+            Мій перший лендінг
+        </h1>
 
-        <nav class="site-nav" aria-label="Головна навігація">
-            <ul>
+        <nav class="navigation" aria-label="Головна навігація">
 
-                <li>
-                    <a href="index.html">
+            <ul class="navigation__list">
+
+                <li class="navigation__item">
+                    <a class="navigation__link"
+                       href="index.html">
                         Головна
                     </a>
                 </li>
 
-                <li>
-                    <a href="about.html" aria-current="page">
+                <li class="navigation__item">
+                    <a class="navigation__link"
+                       href="about.html"
+                       aria-current="page">
                         Про нас
                     </a>
                 </li>
 
-                <li>
-                    <a href="contacts.html">
+                <li class="navigation__item">
+                    <a class="navigation__link"
+                       href="contacts.html">
                         Контакти
                     </a>
                 </li>
 
             </ul>
+
         </nav>
 
     </header>
 
-    <main id="main">
 
-        <section
-            class="about"
-            aria-labelledby="about-title"
-        >
+    <main class="main" id="main">
 
-            <h2 id="about-title">Про нашу команду</h2>
+        <article class="about-article">
 
-            <p>
+            <h2 class="about-article__title">
+                Про нашу команду
+            </h2>
+
+            <p class="about-article__text">
                 Ми — команда студентів, яка створює навчальний
                 веб-проєкт у межах курсу з веб-програмування.
             </p>
 
-        </section>
+        </article>
 
-        <section
-            class="skills"
-            aria-labelledby="skills-title"
-        >
 
-            <h2 id="skills-title">Наші навички</h2>
+        <section class="skills">
 
-            <ul>
-                <li>HTML, семантика та доступність</li>
-                <li>CSS, оформлення сторінок</li>
-                <li>JavaScript, робота з DOM</li>
-            </ul>
+            <h2 class="skills__title">
+                Наші навички
+            </h2>
 
-        </section>
+            <ul class="skills__list">
 
-        <section
-            class="history"
-            aria-labelledby="history-title"
-        >
+                <li class="skills__item">
+                    HTML, семантика та доступність
+                </li>
 
-            <h2 id="history-title">Історія</h2>
+                <li class="skills__item">
+                    CSS та оформлення сторінок
+                </li>
 
-            <dl>
-                <dt>2023</dt>
-                <dd>Перші навчальні проєкти</dd>
+                <li class="skills__item">
+                    JavaScript та робота з DOM
+                </li>
 
-                <dt>2024</dt>
-                <dd>Командні веб-проєкти та практика</dd>
-
-                <dt>2025</dt>
-                <dd>Запуск навчального лендінгу</dd>
-            </dl>
-
-        </section>
-
-        <section
-            class="values"
-            aria-labelledby="values-title"
-        >
-
-            <h2 id="values-title">Цінності</h2>
-
-            <ul>
-                <li>Якість коду та простота</li>
-                <li>Навчання через практику</li>
-                <li>Комунікація та підтримка</li>
             </ul>
 
         </section>
 
     </main>
 
-    <footer class="site-footer">
 
-        <p>
+    <aside class="sidebar sidebar--values">
+
+        <h3 class="sidebar__title">
+            Цінності
+        </h3>
+
+        <ul class="sidebar__list">
+
+            <li class="sidebar__item">
+                Якість коду та простота
+            </li>
+
+            <li class="sidebar__item">
+                Навчання через практику
+            </li>
+
+            <li class="sidebar__item">
+                Комунікація та підтримка
+            </li>
+
+        </ul>
+
+    </aside>
+
+
+    <footer class="footer">
+
+        <p class="footer__text">
             © 2026 Група 6.1214-пі-2
         </p>
 

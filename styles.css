@@ -1,0 +1,522 @@
+/* =========================
+   ЗМІННІ
+   ========================= */
+
+:root {
+    --color-primary: #2457ff;
+    --color-primary-dark: #173dcc;
+
+    --color-background: #eef5f7;
+    --color-surface: #ffffff;
+
+    --color-text: #222222;
+    --color-muted: #666666;
+
+    --color-border: #d7dce2;
+
+    --color-links-sidebar: #8fd3df;
+    --color-values-sidebar: #d5a5a5;
+    --color-social-sidebar: #63c782;
+
+    --color-footer: #263238;
+
+    --radius-small: 6px;
+    --radius-medium: 10px;
+
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+
+    --content-width: 1000px;
+}
+
+
+/* =========================
+   BOX MODEL + RESET
+   ========================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* =========================
+   SKIP LINK
+   ========================= */
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+
+    background: white;
+    color: black;
+
+    padding: var(--space-sm);
+    z-index: 100;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.header {
+    background-color: var(--color-primary);
+    color: white;
+
+    padding: var(--space-md) var(--space-xl);
+
+    text-align: center;
+}
+
+.header__title {
+    margin: 0 0 var(--space-sm);
+    font-size: 1.8rem;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.navigation__list {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.navigation__item {
+    margin: 0;
+}
+
+.navigation__link {
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    padding: var(--space-xs) var(--space-sm);
+
+    border-radius: var(--radius-small);
+}
+
+.navigation__link:hover {
+    text-decoration: underline;
+}
+
+.navigation__link[aria-current="page"] {
+    background-color: white;
+    color: var(--color-primary);
+}
+
+
+/* =========================
+   MAIN
+   ========================= */
+
+.main {
+    max-width: var(--content-width);
+
+    margin: var(--space-xl) auto;
+
+    padding: var(--space-lg);
+
+    background-color: var(--color-surface);
+
+    border-radius: var(--radius-medium);
+}
+
+.main__title {
+    margin-top: 0;
+}
+
+
+/* =========================
+   ARTICLE
+   ========================= */
+
+.article {
+    margin-bottom: var(--space-xl);
+}
+
+.article__title {
+    margin-top: 0;
+
+    color: var(--color-primary-dark);
+}
+
+.article__text {
+    color: var(--color-muted);
+}
+
+.article__media {
+    margin-top: var(--space-lg);
+}
+
+
+/* =========================
+   MEDIA
+   ========================= */
+
+.media {
+    max-width: 450px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: var(--space-md);
+
+    background-color: var(--color-surface);
+}
+
+.media--framed {
+    border: 2px solid var(--color-text);
+    border-radius: var(--radius-medium);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.media__image {
+    width: 100%;
+    height: auto;
+
+    border-radius: var(--radius-small);
+}
+
+.media__caption {
+    margin-top: var(--space-sm);
+
+    text-align: center;
+    color: var(--color-muted);
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   BENEFITS
+   ========================= */
+
+.benefits {
+    margin-bottom: var(--space-xl);
+}
+
+.benefits__title {
+    color: var(--color-primary-dark);
+}
+
+.benefits__list {
+    padding-left: 1.5rem;
+}
+
+.benefits__item {
+    margin-bottom: var(--space-xs);
+}
+
+
+/* =========================
+   SERVICES / TABLE
+   ========================= */
+
+.services {
+    margin-top: var(--space-xl);
+}
+
+.services__title {
+    color: var(--color-primary-dark);
+}
+
+.services__table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: var(--space-md);
+}
+
+.services__header,
+.services__cell {
+    border: 1px solid var(--color-border);
+
+    padding: var(--space-sm);
+
+    text-align: left;
+}
+
+.services__header {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.services__row:nth-child(even) {
+    background-color: #f2f5f8;
+}
+
+.services__row:hover {
+    background-color: #e6edf5;
+}
+
+
+/* =========================
+   ABOUT
+   ========================= */
+
+.about-article {
+    margin-bottom: var(--space-xl);
+}
+
+.about-article__title {
+    color: var(--color-primary-dark);
+}
+
+.about-article__text {
+    color: var(--color-muted);
+}
+
+
+/* =========================
+   SKILLS
+   ========================= */
+
+.skills {
+    margin-top: var(--space-lg);
+}
+
+.skills__title {
+    color: var(--color-primary-dark);
+}
+
+.skills__list {
+    padding-left: 1.5rem;
+}
+
+.skills__item {
+    margin-bottom: var(--space-xs);
+}
+
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.sidebar {
+    max-width: var(--content-width);
+
+    margin: 0 auto;
+
+    padding: var(--space-lg);
+}
+
+.sidebar__title {
+    margin-top: 0;
+}
+
+.sidebar__list {
+    margin-bottom: 0;
+}
+
+.sidebar__item {
+    margin-bottom: var(--space-xs);
+}
+
+.sidebar__link {
+    text-decoration: none;
+}
+
+.sidebar__link:hover {
+    text-decoration: underline;
+}
+
+
+/* Модифікатори */
+
+.sidebar--links {
+    background-color: var(--color-links-sidebar);
+}
+
+.sidebar--values {
+    background-color: var(--color-values-sidebar);
+}
+
+.sidebar--social {
+    background-color: var(--color-social-sidebar);
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+    margin-top: var(--space-xl);
+
+    padding: var(--space-md);
+
+    background-color: var(--color-footer);
+
+    color: white;
+
+    text-align: center;
+}
+
+.footer__text {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   CONTACT FORM
+   ========================= */
+
+.contact-form {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    padding: var(--space-lg);
+
+    background-color: #f8f9fa;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+}
+
+.contact-form__item {
+    margin-bottom: var(--space-md);
+}
+
+.contact-form__label {
+    display: block;
+
+    margin-bottom: var(--space-xs);
+
+    font-weight: bold;
+}
+
+.contact-form__input,
+.contact-form__textarea {
+    width: 100%;
+
+    padding: var(--space-sm);
+
+    border: 1px solid #aaa;
+    border-radius: var(--radius-small);
+
+    font: inherit;
+}
+
+.contact-form__textarea {
+    resize: vertical;
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+    border-color: var(--color-primary);
+
+    outline: 2px solid rgba(36, 87, 255, 0.2);
+}
+
+
+/* Валідні поля */
+
+.contact-form__input:valid {
+    border-color: #28a745;
+}
+
+
+/* Невалідні поля */
+
+.contact-form__input:invalid:not(:placeholder-shown),
+.contact-form__textarea:invalid:not(:placeholder-shown) {
+    border-color: #dc3545;
+}
+
+
+/* Кнопка */
+
+.contact-form__button {
+    padding: var(--space-sm) var(--space-lg);
+
+    background-color: var(--color-primary);
+    color: white;
+
+    border: none;
+    border-radius: var(--radius-small);
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.contact-form__button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+
+/* =========================
+   АДАПТИВНІСТЬ
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .navigation__list {
+        flex-direction: column;
+
+        gap: var(--space-xs);
+    }
+
+    .main {
+        margin: var(--space-md);
+
+        padding: var(--space-md);
+    }
+
+    .sidebar {
+        margin-left: var(--space-md);
+        margin-right: var(--space-md);
+    }
+
+    .services__table {
+        font-size: 0.85rem;
+    }
+
+}
