@@ -3,62 +3,140 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
+
     <meta name="description"
           content="Інформація про нашу команду.">
 
-    <title>Лабораторна 3 - Про нас</title>
+    <title>Лабораторна 4 - Про нас</title>
 
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <a class="skip-link" href="#main">
-        Перейти до основного контенту
-    </a>
+<div class="layout">
 
+    <!-- HEADER -->
     <header class="header">
 
         <h1 class="header__title">
-            Мій перший лендінг
+            Лабораторна №4
         </h1>
 
-        <nav class="navigation" aria-label="Головна навігація">
+        <nav class="nav"
+             aria-label="Головна навігація">
 
-            <ul class="navigation__list">
+            <a class="nav__link"
+               href="index.html">
+                Головна
+            </a>
 
-                <li class="navigation__item">
-                    <a class="navigation__link"
-                       href="index.html">
-                        Головна
-                    </a>
-                </li>
+            <a class="nav__link"
+               href="about.html"
+               aria-current="page">
+                Про нас
+            </a>
 
-                <li class="navigation__item">
-                    <a class="navigation__link"
-                       href="about.html"
-                       aria-current="page">
-                        Про нас
-                    </a>
-                </li>
-
-                <li class="navigation__item">
-                    <a class="navigation__link"
-                       href="contacts.html">
-                        Контакти
-                    </a>
-                </li>
-
-            </ul>
+            <a class="nav__link nav__link--cta"
+               href="contacts.html">
+                Контакти
+            </a>
 
         </nav>
 
     </header>
 
 
-    <main class="main" id="main">
+    <!-- ASIDE -->
+    <aside class="sidebar">
+
+        <section class="sidebar__section">
+
+            <h2 class="sidebar__title">
+                Корисні посилання
+            </h2>
+
+            <ul class="sidebar__list">
+
+                <li class="sidebar__item">
+
+                    <a class="sidebar__link"
+                       href="https://developer.mozilla.org/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        MDN Web Docs
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <section class="sidebar__section">
+
+            <h2 class="sidebar__title">
+                Цінності
+            </h2>
+
+            <ul class="sidebar__list">
+
+                <li class="sidebar__item">
+                    Якість коду та прозорість
+                </li>
+
+                <li class="sidebar__item">
+                    Навчання через практику
+                </li>
+
+                <li class="sidebar__item">
+                    Комунікація та підтримка
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <section class="sidebar__section">
+
+            <h2 class="sidebar__title">
+                Соціальні мережі
+            </h2>
+
+            <ul class="sidebar__list">
+
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#">
+                        Facebook
+                    </a>
+                </li>
+
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#">
+                        Instagram
+                    </a>
+                </li>
+
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#">
+                        LinkedIn
+                    </a>
+                </li>
+
+            </ul>
+
+        </section>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
 
         <article class="about-article">
 
@@ -83,15 +161,15 @@
             <ul class="skills__list">
 
                 <li class="skills__item">
-                    HTML, семантика та доступність
+                    HTML
                 </li>
 
                 <li class="skills__item">
-                    CSS та оформлення сторінок
+                    CSS
                 </li>
 
                 <li class="skills__item">
-                    JavaScript та робота з DOM
+                    JavaScript
                 </li>
 
             </ul>
@@ -101,38 +179,63 @@
     </main>
 
 
-    <aside class="sidebar sidebar--values">
-
-        <h3 class="sidebar__title">
-            Цінності
-        </h3>
-
-        <ul class="sidebar__list">
-
-            <li class="sidebar__item">
-                Якість коду та простота
-            </li>
-
-            <li class="sidebar__item">
-                Навчання через практику
-            </li>
-
-            <li class="sidebar__item">
-                Комунікація та підтримка
-            </li>
-
-        </ul>
-
-    </aside>
-
-
+    <!-- FOOTER -->
     <footer class="footer">
 
-        <p class="footer__text">
-            © 2026 Група 6.1214-пі-2
-        </p>
+        <div class="footer__inner">
+
+            <div class="footer__info">
+
+                <p class="footer__text">
+                    © 2026 Група 6.1214-пі-2
+                </p>
+
+            </div>
+
+
+            <section class="footer__contacts">
+
+                <h2 class="footer__title">
+                    Наші контакти
+                </h2>
+
+                <address class="footer__address">
+
+                    <p class="footer__contact">
+
+                        Email:
+
+                        <a class="footer__link"
+                           href="mailto:wwwd.timkov2@gmail.com">
+                            wwwd.timkov2@gmail.com
+                        </a>
+
+                    </p>
+
+                    <p class="footer__contact">
+
+                        Телефон:
+
+                        <a class="footer__link"
+                           href="tel:+380989198434">
+                            +38 (098) 919-84-34
+                        </a>
+
+                    </p>
+
+                    <p class="footer__contact">
+                        м. Запоріжжя, Україна
+                    </p>
+
+                </address>
+
+            </section>
+
+        </div>
 
     </footer>
+
+</div>
 
 </body>
 
