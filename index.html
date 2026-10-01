@@ -8,117 +8,76 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Головна сторінка навчального лендінгу: новини, послуги, переваги.">
+          content="Головна сторінка навчального сайту з новинами.">
 
-    <title>Лабораторна 3 - Головна</title>
-    
+    <title>Лабораторна 4 - Головна</title>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <a class="skip-link" href="#main">
-        Перейти до основного контенту
-    </a>
+<div class="layout">
 
+    <!-- HEADER -->
     <header class="header">
 
         <h1 class="header__title">
-            Мій перший лендінг
+            Лабораторна №4
         </h1>
 
-        <nav class="navigation" aria-label="Головна навігація">
+        <nav class="nav"
+             aria-label="Головна навігація">
 
-            <ul class="navigation__list">
+            <a
+                class="nav__link"
+                href="index.html"
+                aria-current="page"
+            >
+                Головна
+            </a>
 
-                <li class="navigation__item">
-                    <a
-                        class="navigation__link"
-                        href="index.html"
-                        aria-current="page"
-                    >
-                        Головна
-                    </a>
-                </li>
+            <a
+                class="nav__link"
+                href="about.html"
+            >
+                Про нас
+            </a>
 
-                <li class="navigation__item">
-                    <a
-                        class="navigation__link"
-                        href="about.html"
-                    >
-                        Про нас
-                    </a>
-                </li>
-
-                <li class="navigation__item">
-                    <a
-                        class="navigation__link"
-                        href="contacts.html"
-                    >
-                        Контакти
-                    </a>
-                </li>
-
-            </ul>
+            <a
+                class="nav__link nav__link--cta"
+                href="contacts.html"
+            >
+                Контакти
+            </a>
 
         </nav>
 
     </header>
 
 
-    <main class="main" id="main">
+    <!-- ASIDE -->
+    <aside class="sidebar">
 
-        <article class="article">
+        <section class="sidebar__section">
 
-            <h2 class="article__title">
-                Новини
+            <h2 class="sidebar__title">
+                Корисні посилання
             </h2>
 
-            <p class="article__text">
-                Вітаю! Це моя третя лабораторна робота
-                з веб-програмування.
-            </p>
+            <ul class="sidebar__list">
 
-            <figure class="media article__media media--framed">
+                <li class="sidebar__item">
 
-                <img
-                    class="media__image"
-                    src="assets/images/photo.png"
-                    alt="Зображення для лабораторної роботи"
-                    width="400"
-                >
+                    <a
+                        class="sidebar__link"
+                        href="https://developer.mozilla.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        MDN Web Docs
+                    </a>
 
-                <figcaption class="media__caption">
-                    Зображення для новини
-                </figcaption>
-
-            </figure>
-
-        </article>
-
-
-        <section class="benefits"
-                 aria-labelledby="benefits-title">
-
-            <h3
-                class="benefits__title"
-                id="benefits-title"
-            >
-                Наші переваги
-            </h3>
-
-            <ul class="benefits__list">
-
-                <li class="benefits__item">
-                    Сучасні технології
-                </li>
-
-                <li class="benefits__item">
-                    Зручна навігація
-                </li>
-
-                <li class="benefits__item">
-                    Адаптивна структура
                 </li>
 
             </ul>
@@ -126,142 +85,275 @@
         </section>
 
 
-        <section class="services"
-                 aria-labelledby="services-title">
+        <section class="sidebar__section">
 
-            <h3
-                class="services__title"
-                id="services-title"
+            <h2 class="sidebar__title">
+                Цінності
+            </h2>
+
+            <ul class="sidebar__list">
+
+                <li class="sidebar__item">
+                    Якість коду та прозорість
+                </li>
+
+                <li class="sidebar__item">
+                    Навчання через практику
+                </li>
+
+                <li class="sidebar__item">
+                    Комунікація та підтримка
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <section class="sidebar__section">
+
+            <h2 class="sidebar__title">
+                Соціальні мережі
+            </h2>
+
+            <ul class="sidebar__list">
+
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#">
+                        Facebook
+                    </a>
+                </li>
+
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#">
+                        Instagram
+                    </a>
+                </li>
+
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#">
+                        LinkedIn
+                    </a>
+                </li>
+
+            </ul>
+
+        </section>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <section
+            class="news"
+            aria-labelledby="news-title"
+        >
+
+            <h2
+                class="news__title"
+                id="news-title"
             >
-                Наші послуги
-            </h3>
+                Останні новини
+            </h2>
 
-            <table class="services__table">
 
-                <thead>
+            <div class="news__list">
 
-                    <tr class="services__row">
+                <!-- НОВИНА 1 -->
+                <article class="news-card">
 
-                        <th
-                            class="services__header"
-                            scope="col"
+                    <figure class="media media--framed">
+
+                        <img
+                            class="media__image"
+                            src="assets/images/photo.png"
+                            alt="Зображення першої новини"
                         >
-                            Послуга
-                        </th>
 
-                        <th
-                            class="services__header"
-                            scope="col"
+                    </figure>
+
+                    <h3 class="news-card__title">
+                        Старт навчального проєкту
+                    </h3>
+
+                    <p class="news-card__text">
+                        Розпочато роботу над новою версією
+                        навчального вебпроєкту.
+                    </p>
+
+                    <div class="news-card__meta">
+
+                        <time datetime="2026-10-01">
+                            01.10.2026
+                        </time>
+
+                        <a
+                            class="news-card__link"
+                            href="#"
                         >
-                            Опис
-                        </th>
+                            Читати далі
+                        </a>
 
-                        <th
-                            class="services__header"
-                            scope="col"
+                    </div>
+
+                </article>
+
+
+                <!-- НОВИНА 2 -->
+                <article class="news-card">
+
+                    <figure class="media media--framed">
+
+                        <img
+                            class="media__image"
+                            src="assets/images/photo.png"
+                            alt="Зображення другої новини"
                         >
-                            Ціна
-                        </th>
 
-                    </tr>
+                    </figure>
 
-                </thead>
+                    <h3 class="news-card__title">
+                        Робота з Flexbox
+                    </h3>
 
+                    <p class="news-card__text">
+                        Вивчаємо можливості Flexbox для
+                        компонування елементів сторінки.
+                    </p>
 
-                <tbody>
+                    <div class="news-card__meta">
 
-                    <tr class="services__row">
+                        <time datetime="2026-10-01">
+                            01.10.2026
+                        </time>
 
-                        <td class="services__cell">
-                            Розробка сайту
-                        </td>
+                        <a
+                            class="news-card__link"
+                            href="#"
+                        >
+                            Читати далі
+                        </a>
 
-                        <td class="services__cell">
-                            Створення простого корпоративного сайту
-                        </td>
+                    </div>
 
-                        <td class="services__cell">
-                            від 500 $
-                        </td>
-
-                    </tr>
-
-
-                    <tr class="services__row">
-
-                        <td class="services__cell">
-                            SEO-оптимізація
-                        </td>
-
-                        <td class="services__cell">
-                            Базова оптимізація та покращення видимості
-                        </td>
-
-                        <td class="services__cell">
-                            від 300 $
-                        </td>
-
-                    </tr>
+                </article>
 
 
-                    <tr class="services__row">
+                <!-- НОВИНА 3 -->
+                <article class="news-card">
 
-                        <td class="services__cell">
-                            Підтримка
-                        </td>
+                    <figure class="media media--framed">
 
-                        <td class="services__cell">
-                            Оновлення та технічна допомога
-                        </td>
+                        <img
+                            class="media__image"
+                            src="assets/images/photo.png"
+                            alt="Зображення третьої новини"
+                        >
 
-                        <td class="services__cell">
-                            від 100 $ / місяць
-                        </td>
+                    </figure>
 
-                    </tr>
+                    <h3 class="news-card__title">
+                        CSS Grid Layout
+                    </h3>
 
-                </tbody>
+                    <p class="news-card__text">
+                        Створюємо основний каркас сторінки
+                        за допомогою CSS Grid.
+                    </p>
 
-            </table>
+                    <div class="news-card__meta">
+
+                        <time datetime="2026-10-01">
+                            01.10.2026
+                        </time>
+
+                        <a
+                            class="news-card__link"
+                            href="#"
+                        >
+                            Читати далі
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
 
         </section>
 
     </main>
 
 
-    <aside class="sidebar sidebar--links">
-
-        <h3 class="sidebar__title">
-            Корисні посилання
-        </h3>
-
-        <ul class="sidebar__list">
-
-            <li class="sidebar__item">
-
-                <a
-                    class="sidebar__link"
-                    href="https://developer.mozilla.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    MDN Web Docs
-                </a>
-
-            </li>
-
-        </ul>
-
-    </aside>
-
-
+    <!-- FOOTER -->
     <footer class="footer">
 
-        <p class="footer__text">
-            © 2026 Група 6.1214-пі-2
-        </p>
+        <div class="footer__inner">
+
+            <div class="footer__info">
+
+                <p class="footer__text">
+                    © 2026 Група 6.1214-пі-2
+                </p>
+
+            </div>
+
+
+            <section
+                class="footer__contacts"
+                aria-labelledby="footer-contacts-title"
+            >
+
+                <h2
+                    class="footer__title"
+                    id="footer-contacts-title"
+                >
+                    Наші контакти
+                </h2>
+
+                <address class="footer__address">
+
+                    <p class="footer__contact">
+
+                        Email:
+
+                        <a
+                            class="footer__link"
+                            href="mailto:wwwd.timkov2@gmail.com"
+                        >
+                            wwwd.timkov2@gmail.com
+                        </a>
+
+                    </p>
+
+                    <p class="footer__contact">
+
+                        Телефон:
+
+                        <a
+                            class="footer__link"
+                            href="tel:+380989198434"
+                        >
+                            +38 (098) 919-84-34
+                        </a>
+
+                    </p>
+
+                    <p class="footer__contact">
+                        м. Запоріжжя, Україна
+                    </p>
+
+                </address>
+
+            </section>
+
+        </div>
 
     </footer>
+
+</div>
 
 </body>
 
