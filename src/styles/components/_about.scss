@@ -1,0 +1,30 @@
+.about-article,
+.skills {
+    max-width:
+        900px;
+
+    margin:
+        0 auto
+        var(--space-4);
+
+    padding:
+        var(--space-4);
+
+    background-color:
+        var(--surface);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        var(--shadow);
+}
+
+.about-article__title,
+.skills__title {
+    color:
+        var(--brand);
+
+    font-size:
+        var(--fs-h2);
+}
