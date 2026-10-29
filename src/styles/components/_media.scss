@@ -1,0 +1,40 @@
+.media {
+    margin:
+        0;
+
+    aspect-ratio:
+        16 / 9;
+
+    overflow:
+        clip;
+}
+
+.media--framed {
+    background-color:
+        var(--surface);
+}
+
+.media picture {
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        100%;
+}
+
+.media__image {
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+}

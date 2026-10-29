@@ -1,0 +1,55 @@
+.layout {
+    min-height: 100dvh;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-rows:
+        auto
+        auto
+        1fr
+        auto;
+
+    grid-template-areas:
+        "header"
+        "sidebar"
+        "main"
+        "footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.main {
+    min-width: 0;
+
+    padding:
+        var(--space-4);
+}
+
+.main__title {
+    margin-top: 0;
+
+    color:
+        var(--brand);
+
+    text-align:
+        center;
+
+    font-size:
+        var(--fs-h2);
+}
