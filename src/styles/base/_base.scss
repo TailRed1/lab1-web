@@ -1,9 +1,9 @@
 @use "../abstracts" as ui;
 
 :root {
-    --brand: #{ui.$brand};
-    --brand-light: #{ui.$brand-light};
-    --brand-soft: #{ui.$brand-soft};
+    --brand: var(--color-brand-600);
+    --brand-light: var(--color-brand-500);
+    --brand-soft: var(--color-brand-100);
 
     --bg: #{ui.$bg};
     --surface: #{ui.$surface};
