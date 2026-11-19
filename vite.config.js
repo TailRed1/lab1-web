@@ -12,7 +12,7 @@ export default defineConfig({
 
             context: {
                 siteName: "Навчальний сайт",
-                labName: "Лабораторна №7"
+                labName: "Лабораторна №8"
             }
         })
     ],
