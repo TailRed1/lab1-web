@@ -1,15 +1,18 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
+import { resolve } from "node:path";
 import handlebars from "vite-plugin-handlebars";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
     plugins: [
+        tailwindcss(),
+
         handlebars({
             partialDirectory: resolve(process.cwd(), "src/partials"),
 
             context: {
                 siteName: "Навчальний сайт",
-                labName: "Лабораторна №6"
+                labName: "Лабораторна №7"
             }
         })
     ],
